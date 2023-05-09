@@ -1,5 +1,5 @@
 .navbar {
-  height: 50px;
+  //height: 10vh;
   background-color: lightseagreen;
   display: flex;
   align-items: center;
@@ -54,6 +54,8 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
 }
 
 .notification {
@@ -65,4 +67,29 @@
   width: 80%;
   padding: 5px;
   margin-top: 10px;
+  border-radius: 10px;
+}
+.nav-element .navbar-small{
+  @media(max-width:768px){display:block}
+  @media(min-width:768px){display:none}
+}
+.nav-element .navbar-large{
+  @media(max-width:768px){display:none}
+  @media(min-width:768px){display:block}
+}
+.navbar .navbar-toggler{
+  border: none;
+  outline: none;
+}
+.navbar .navbar-toggler-icon{
+  width: 20px;
+  color: white;
+  margin-top: 10px;
+}
+.navbar-toggler-icon {
+  background-image: url('../static/controls.png');
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
 }

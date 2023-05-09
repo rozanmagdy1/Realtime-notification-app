@@ -3,7 +3,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: whitesmoke;
+  background-color: whitesmoke !important;
 }
 
 .app-container {
@@ -22,9 +22,10 @@ body {
 }
 
 input {
-  width: 50%;
+  border: 1px solid #0000004f;
   padding: 10px;
   margin-bottom: 20px;
+  text-align: center;
 }
 input:focus {
   outline: none;
@@ -43,9 +44,6 @@ button {
 .username {
   font-weight: bold;
   color: lightseagreen;
-  position: absolute;
-  top: 15px;
-  right: 20px;
 }
 
 h2{

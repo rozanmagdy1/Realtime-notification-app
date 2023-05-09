@@ -3,7 +3,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: whitesmoke;
+  background-color: whitesmoke !important;
 }
 
 .app-container {
@@ -22,9 +22,10 @@ body {
 }
 
 input {
-  width: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.3098039216);
   padding: 10px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 input:focus {
@@ -44,9 +45,6 @@ button {
 .username {
   font-weight: bold;
   color: lightseagreen;
-  position: absolute;
-  top: 15px;
-  right: 20px;
 }
 
 h2 {
@@ -57,7 +55,6 @@ h2 {
 }
 
 .navbar {
-  height: 50px;
   background-color: lightseagreen;
   display: flex;
   align-items: center;
@@ -112,6 +109,8 @@ h2 {
   display: flex;
   flex-direction: column;
   padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
 }
 
 .notification {
@@ -123,6 +122,49 @@ h2 {
   width: 80%;
   padding: 5px;
   margin-top: 10px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .nav-element .navbar-small {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .nav-element .navbar-small {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-element .navbar-large {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .nav-element .navbar-large {
+    display: block;
+  }
+}
+
+.navbar .navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar .navbar-toggler-icon {
+  width: 20px;
+  color: white;
+  margin-top: 10px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("../static/controls.png");
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .card {

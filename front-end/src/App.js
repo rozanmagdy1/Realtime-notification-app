@@ -26,6 +26,7 @@ function App() {
     return (
         <div className="App">
             <div className='container app-container p-5'>
+                <div className="username mb-2 text-center">{user}</div>
                 {user ? (
                     <>
                         <Navbar socket={socket}/>
@@ -34,7 +35,7 @@ function App() {
                                 <Card key={post.id} post={post} socket={socket} user={user}/>
                             ))
                         }
-                        <span className="username">{user}</span>
+
                     </>
                 ) : (
                     <div className="login">
