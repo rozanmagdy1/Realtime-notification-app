@@ -69,27 +69,45 @@
   margin-top: 10px;
   border-radius: 10px;
 }
-.nav-element .navbar-small{
-  @media(max-width:768px){display:block}
-  @media(min-width:768px){display:none}
+.nav-element .navbar-small {
+  @media (max-width: 768px) {
+    display: block;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
-.nav-element .navbar-large{
-  @media(max-width:768px){display:none}
-  @media(min-width:768px){display:block}
+.nav-element .navbar-large {
+  @media (max-width: 768px) {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    display: block;
+  }
 }
-.navbar .navbar-toggler{
+.navbar .navbar-toggler {
   border: none;
   outline: none;
+  width: auto;
 }
-.navbar .navbar-toggler-icon{
+.navbar .navbar-toggler-icon {
   width: 20px;
   color: white;
   margin-top: 10px;
 }
 .navbar-toggler-icon {
-  background-image: url('../static/controls.png');
+  background-image: url("../static/burger.svg") !important;
 }
 .navbar-toggler:focus {
-  outline: none;
-  box-shadow: none;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.navbar-collapse.icons.collapse.show {
+  background-color: rgba(255, 255, 255, 0.139);
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .navbar-nav {
+    gap: 10px;
+  }
 }
